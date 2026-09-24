@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
+import { Link } from 'react-router-dom'
 import './FAQ.css'
 
 const FAQ = () => {
@@ -353,12 +354,12 @@ const FAQ = () => {
                                             enviar uma mensagem direta. Estamos aqui para ajudar.
                                         </p>
 
-                                        <a
-                                            href="PaginaContatoSuporte.html"
+                                        <Link
+                                            to="/contato"
                                             className="btn btn-contact rounded-pill p-3 px-4"
                                         >
                                             Ir para Contato
-                                        </a>
+                                        </Link>
 
                                     </div>
                                 </div>

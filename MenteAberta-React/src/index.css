@@ -401,6 +401,49 @@ body {
     color: white;
 }
 
+.btn-primary-custom {
+    background-color: #3D5A4F;
+    border-color: #3D5A4F;
+    color: #FFFFFF;
+    border-radius: 12px;
+    padding: 12px;
+    transition: 0.3s;
+}
+
+.btn-primary-custom:hover {
+    background-color: #5A7A6A;
+    color: #FFFFFF;
+}
+
+.form-control-custom {
+    border-radius: 12px;
+    border: 1px solid #E2EBE8;
+    padding: 0.8rem 1rem;
+    box-shadow: none;
+    font-size: 0.95rem;
+}
+
+.form-control-custom:focus {
+    border-color: #6B8E7D;
+    box-shadow: 0 0 0 0.2rem rgba(107, 142, 125, 0.25);
+}
+
+.input-group-password .form-control-custom {
+    border-right: none;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.input-group-password .input-group-text {
+    background-color: transparent;
+    border: 1px solid #E2EBE8;
+    border-left: none;
+    border-top-right-radius: 12px;
+    border-bottom-right-radius: 12px;
+    cursor: pointer;
+    color: #A0AAB2;
+}
+
 @media (max-width: 767.98px) {
     .bg-atende-voluntario .container {
         padding-left: 1rem !important;
