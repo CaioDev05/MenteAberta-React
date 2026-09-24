@@ -43,7 +43,7 @@ const Blog = () => {
 
                                     <div className="col-lg-5">
                                         <img
-                                            src="../img/featured-photo.png"
+                                            src="Blog/featured-photo.png"
                                             alt="Planta em vaso"
                                             className="w-100 h-100 object-fit-cover rounded-4"
                                             style={{ minHeight: '250px' }}
@@ -83,7 +83,7 @@ const Blog = () => {
                                             <div className="d-flex align-items-center">
 
                                                 <img
-                                                    src="../img/Ellipse.png"
+                                                    src="Blog/Ellipse.png"
                                                     alt="Helena Souza"
                                                     className="rounded-circle me-3"
                                                     width="45"
@@ -156,7 +156,7 @@ const Blog = () => {
                                     <div className="bg-white border rounded-4 shadow-sm p-3 d-flex flex-column w-100 card-hover">
 
                                         <img
-                                            src="../img/post-photo.png"
+                                            src="Blog/post-photo.png"
                                             alt="post1"
                                             className="w-100 rounded-3 mb-3 object-fit-cover"
                                             style={{ height: '140px' }}
@@ -194,7 +194,7 @@ const Blog = () => {
 
                                             <div className="d-flex align-items-center">
                                                 <img
-                                                    src="../img/EllipseBlog1.png"
+                                                    src="Blog/EllipseBlog1.png"
                                                     alt="Ana"
                                                     className="rounded-circle me-2"
                                                     width="24"
@@ -225,7 +225,7 @@ const Blog = () => {
                                     <div className="bg-white border rounded-4 shadow-sm p-3 d-flex flex-column w-100 card-hover">
 
                                         <img
-                                            src="../img/post-photo2.png"
+                                            src="Blog/post-photo2.png"
                                             alt="post2"
                                             className="w-100 rounded-3 mb-3 object-fit-cover"
                                             style={{ height: '140px' }}
@@ -262,7 +262,7 @@ const Blog = () => {
 
                                             <div className="d-flex align-items-center">
                                                 <img
-                                                    src="../img/EllipseBlog2.png"
+                                                    src="Blog/EllipseBlog2.png"
                                                     alt="Dr Roberto"
                                                     className="rounded-circle me-2"
                                                     width="24"
@@ -293,7 +293,7 @@ const Blog = () => {
                                     <div className="bg-white border rounded-4 shadow-sm p-3 d-flex flex-column w-100 card-hover">
 
                                         <img
-                                            src="../img/post-photo3.png"
+                                            src="Blog/post-photo3.png"
                                             alt="post3"
                                             className="w-100 rounded-3 mb-3 object-fit-cover"
                                             style={{ height: '140px' }}
@@ -330,7 +330,7 @@ const Blog = () => {
 
                                             <div className="d-flex align-items-center">
                                                 <img
-                                                    src="../img/EllipseBlog3.png"
+                                                    src="Blog/EllipseBlog3.png"
                                                     alt="Beatriz"
                                                     className="rounded-circle me-2"
                                                     width="24"
@@ -361,7 +361,7 @@ const Blog = () => {
                                     <div className="bg-white border rounded-4 shadow-sm p-3 d-flex flex-column w-100 card-hover">
 
                                         <img
-                                            src="../img/post-photo4.png"
+                                            src="Blog/post-photo4.png"
                                             alt="post4"
                                             className="w-100 rounded-3 mb-3 object-fit-cover"
                                             style={{ height: '140px' }}
@@ -398,7 +398,7 @@ const Blog = () => {
 
                                             <div className="d-flex align-items-center">
                                                 <img
-                                                    src="../img/EllipseBlog4.png"
+                                                    src="Blog/EllipseBlog4.png"
                                                     alt="Dr. Marcos Silva"
                                                     className="rounded-circle me-2"
                                                     width="24"
@@ -429,7 +429,7 @@ const Blog = () => {
                                     <div className="bg-white border rounded-4 shadow-sm p-3 d-flex flex-column w-100 card-hover">
 
                                         <img
-                                            src="../img/post-photo5.png"
+                                            src="Blog/post-photo5.png"
                                             alt="post5"
                                             className="w-100 rounded-3 mb-3 object-fit-cover"
                                             style={{ height: '140px' }}
@@ -466,7 +466,7 @@ const Blog = () => {
 
                                             <div className="d-flex align-items-center">
                                                 <img
-                                                    src="../img/EllipseBlog5.png"
+                                                    src="Blog/EllipseBlog5.png"
                                                     alt="Helena Souza"
                                                     className="rounded-circle me-2"
                                                     width="24"
@@ -497,7 +497,7 @@ const Blog = () => {
                                     <div className="bg-white border rounded-4 shadow-sm p-3 d-flex flex-column w-100 card-hover">
 
                                         <img
-                                            src="../img/post-photo6.png"
+                                            src="Blog/post-photo6.png"
                                             alt="post6"
                                             className="w-100 rounded-3 mb-3 object-fit-cover"
                                             style={{ height: '140px' }}
@@ -534,7 +534,7 @@ const Blog = () => {
 
                                             <div className="d-flex align-items-center">
                                                 <img
-                                                    src="../img/EllipseBlog6.png"
+                                                    src="Blog/EllipseBlog6.png"
                                                     alt="Clara Vasconcelos"
                                                     className="rounded-circle me-2"
                                                     width="24"

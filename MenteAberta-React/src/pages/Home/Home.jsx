@@ -13,7 +13,7 @@ const Home = () => {
 
                         <div className="col-12 col-sm-10 col-lg-6 mx-auto">
                             <img
-                                src="Peace of mind-bro.png"
+                                src="Home/Peace of mind-bro.png"
                                 className="d-block mx-lg-auto img-fluid"
                                 alt="Ilustração de Paz Mental"
                                 width="700"
@@ -132,7 +132,7 @@ const Home = () => {
                             {/* Imagem */}
                             <div className="col-12 col-sm-10 col-lg-6 mx-auto">
                                 <img
-                                    src="Overwhelmed-amico.png"
+                                    src="Home/Overwhelmed-amico.png"
                                     className="d-block mx-lg-auto img-fluid"
                                     alt="Ilustração de Paz Mental"
                                     width="700"
