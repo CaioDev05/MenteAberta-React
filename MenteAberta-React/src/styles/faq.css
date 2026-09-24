@@ -1,0 +1,60 @@
+.card-contact {
+    background: #5A7A6A;
+    border-radius: 1.5rem;
+}
+
+.btn-contact {
+  background-color: #ffffff;
+  color: #6a887c;
+  font-weight: 500;
+  border: none;
+  transition: opacity 0.2s ease;
+}
+
+.btn-contact:hover {
+  background-color: #f8f9fa;
+  color: #5a7469;
+}
+
+.accordion-item.card-faq {
+    background-color: #FFFFFF;
+    border: 3px solid #EAEAEA; 
+    border-radius: 1.25rem !important;
+    overflow: hidden; 
+    transition: border-color 0.3s ease;
+}
+
+.accordion-item.card-faq:has(.accordion-button:not(.collapsed)) {
+    border-color: #6B8E7D; 
+}
+
+.accordion-item.card-faq .accordion-button {
+    background-color: transparent !important;
+    color: #212529 !important; 
+    box-shadow: none !important; 
+    padding: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.accordion-item.card-faq .accordion-button::after {
+    display: none;
+}
+
+.accordion-item.card-faq .accordion-body {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+    color: #6c757d;
+    border-top: none;
+    opacity: 0;
+    transform: translateY(-8px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.accordion-collapse.collapsing {
+    transition: height 0.35s ease-in-out;
+}
+
+.accordion-collapse.show .accordion-body {
+    opacity: 1;
+    transform: translateY(0);
+}
+
