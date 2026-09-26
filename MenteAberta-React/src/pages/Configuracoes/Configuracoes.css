@@ -2,6 +2,7 @@
     list-style: none;
     min-width: 180px;
     text-align: center;
+    transition: 0.3s;
 }
 
 .page-active {

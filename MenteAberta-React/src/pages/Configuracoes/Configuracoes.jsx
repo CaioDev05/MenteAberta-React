@@ -31,7 +31,7 @@ const Configuracoes = () => {
             </div>
           </section>
 
-          <section className="hero-section container">
+          <section className="container pb-4">
             <ul className="d-flex flex-nowrap overflow-auto p-0 m-0">
               <li className={`btn-configuration flex-fill ${pagina == 1 ? "page-active" : "page-inactive"}`}>
                 <button className="btn w-100 py-3 text-nowrap" onClick={() => { setPagina(1) }}>
@@ -63,17 +63,19 @@ const Configuracoes = () => {
             </ul>
           </section>
 
-          <section className="hero-section container">
+          <section className="container p-0">
             {pagina == 1 && (<Conta />)}
             {pagina == 2 && (<Perfil />)}
             {pagina == 3 && (<Especializacao />)}
             {pagina == 4 && (<Notificacoes />)}
           </section>
 
-          <section className="hero-section container">
+          <section className="container px-0 py-4">
             <div className='d-flex justify-content-between'>
               <button className='btn rounded-pill border bg-white px-4 text-muted'>Anterior</button>
-              <p className='text-p lead'>Etapa {pagina} de 4</p>
+              <div className='d-flex align-items-center justify-content-center'>
+                <span className='text-p m-0'>Etapa {pagina} de 4</span>
+              </div>
               <button className='btn rounded-pill border bg-white px-4 text-muted'>Próxima</button>
             </div>
           </section>
