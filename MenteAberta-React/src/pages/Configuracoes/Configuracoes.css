@@ -1,0 +1,30 @@
+.btn-configuration {
+    list-style: none;
+    min-width: 180px;
+    text-align: center;
+}
+
+.page-active {
+    border-bottom: 0.25rem solid #3D5A4F;
+}
+
+.page-inactive {
+    border-bottom: 0.25rem solid #E2EBE8;
+}
+
+.btn-configuration .btn:active {
+    background-color: transparent !important;
+    border-color: transparent !important;
+    color: inherit !important;
+}
+
+.btn-pagination-configuration {
+    background-color: #FFFFFF;
+    border: 1px solid #EAEAEA;
+    color: #5F6B65;
+    border-radius: 1.75rem;
+    padding: 0.45rem 1.25rem;
+    font-size: 0.85rem;
+    transition: all 0.2s ease-in-out;
+    margin: 0;
+}
