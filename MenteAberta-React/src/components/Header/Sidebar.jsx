@@ -23,7 +23,7 @@ const Sidebar = () => {
             )}
 
             <header
-                className={`offcanvas-md offcanvas-start border-end shadow-sm d-flex flex-column flex-shrink-0 p-3 vh-100 ${isOpen ? 'show' : ''}`}
+                className={`offcanvas-md offcanvas-start shadow-sm d-flex flex-column flex-shrink-0 p-3 ${isOpen ? 'show' : ''}`}
                 style={{ width: "280px", zIndex: 1045 }}
                 tabIndex="-1"
             >

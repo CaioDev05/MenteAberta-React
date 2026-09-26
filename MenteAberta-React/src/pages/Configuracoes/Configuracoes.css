@@ -13,7 +13,7 @@
     border-bottom: 0.25rem solid #E2EBE8;
 }
 
-.btn-configuration .btn:active {
+.btn:active {
     background-color: transparent !important;
     border-color: transparent !important;
     color: inherit !important;
