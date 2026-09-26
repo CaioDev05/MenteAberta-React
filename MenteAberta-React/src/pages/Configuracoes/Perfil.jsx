@@ -5,7 +5,7 @@ const Perfil = () => {
     <>
       <div className='content-box shadow-sm mb-4'>
         <h3>Perfil Profissional</h3>
-        <p className='text-p'>Mantenha seus dados públicos atualizados.</p>
+        <p className='text-p fs-5'>Mantenha seus dados públicos atualizados.</p>
         <div className='row g-4 mt-3'>
           <div className='col-lg-8'>
             <div className='row'>

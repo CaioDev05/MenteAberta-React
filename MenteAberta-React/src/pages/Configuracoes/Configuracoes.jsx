@@ -72,7 +72,7 @@ const Configuracoes = () => {
             {pagina === 4 && (<Notificacoes />)}
           </section>
 
-          <section className="container px-0 py-4">
+          <section className="container px-0 py-4 mb-4">
             <div className='d-flex justify-content-between'>
               <button className='btn rounded-pill border bg-white px-4 text-muted' onClick={() => setPagina(pagina > 1 ? pagina - 1 : pagina)}>Anterior</button>
               <div className='d-flex align-items-center justify-content-center'>

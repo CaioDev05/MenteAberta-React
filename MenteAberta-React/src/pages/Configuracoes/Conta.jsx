@@ -7,7 +7,7 @@ const Conta = () => {
                 <div className='d-flex justify-content-between mb-3'>
                     <div>
                         <h3 className='fw-bold'>Informações da Conta</h3>
-                        <p className='text-p'>Gerencie seu acesso e os dados vinculados à plataforma.</p>
+                        <p className='text-p fs-5'>Gerencie seu acesso e os dados vinculados à plataforma.</p>
                     </div>
 
                     <div className='d-flex align-items-start'>

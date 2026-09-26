@@ -5,7 +5,7 @@ const Especializacao = () => {
     <>
       <div className='content-box shadow-sm'>
         <h3 className='fw-bold'>Tipos de Especialização</h3>
-        <p className='text-p'>Cadastre as áreas que ajudam pacientes a encontrar seu perfil.</p>
+        <p className='text-p fs-5'>Cadastre as áreas que ajudam pacientes a encontrar seu perfil.</p>
 
         <div>
           <label htmlFor="nova-especializacao">Nova Especialização</label>
