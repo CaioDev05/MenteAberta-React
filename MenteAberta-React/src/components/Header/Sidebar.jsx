@@ -47,10 +47,10 @@ const Sidebar = () => {
                 <div className='text-center mb-4'>
                     <div className="position-relative d-inline-block mb-2">
                         <img
-                            src="Blog/Ellipse.png"
+                            src="Voluntario/pro-photo.png"
                             alt="Foto do usuário"
-                            width="40"
-                            height="40"
+                            width="60"
+                            height="60"
                             className="rounded-circle shadow-sm"
                             style={{ objectFit: 'cover' }}
                         />
