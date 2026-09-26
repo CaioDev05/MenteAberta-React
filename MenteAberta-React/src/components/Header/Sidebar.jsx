@@ -8,7 +8,7 @@ const Sidebar = () => {
         <>
             {/* Botão Hambúrguer (Mobile) - Fica fixo no topo esquerdo */}
             <button
-                className="btn btn-success d-md-none position-fixed top-0 start-0 m-3 z-3 shadow-sm"
+                className="btn btn-success d-md-none position-fixed m-3 z-3 shadow-sm"
                 onClick={() => setIsOpen(true)}
             >
                 <i className="bi bi-list fs-5"></i>
