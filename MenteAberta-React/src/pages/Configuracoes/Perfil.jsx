@@ -6,24 +6,33 @@ const Perfil = () => {
       <div className='content-box shadow-sm mb-4'>
         <h3>Perfil Profissional</h3>
         <p className='text-p fs-5'>Mantenha seus dados públicos atualizados.</p>
+        
+        {/* Seção da Foto de Perfil */}
         <div className='row g-4 mt-3'>
-          <div className='col-lg-8'>
-            <div className='row'>
-              <div className='col-3'>
-                <img src="Voluntario/pro-photo.png" alt="" className="rounded-circle shadow-sm" width="140" />
+          <div className='col-12 col-lg-8'>
+            <div className='row text-center text-md-start'>
+              <div className='col-12 col-md-4 col-lg-3 mb-3 mb-md-0'>
+                <img 
+                  src="Voluntario/pro-photo.png" 
+                  alt="" 
+                  className="rounded-circle shadow-sm img-fluid" 
+                  width="140" 
+                />
               </div>
-              <div className='col-5 d-flex align-items-center p-0'>
+              <div className='col-12 col-md-8 col-lg-9 d-flex align-items-center justify-content-center justify-content-md-start p-0'>
                 <div>
-                  <p className='fw-semibold'>Foto de Perfil</p>
-                  <p className='text-p'>JPG ou PNG. Tamanho máximo de 5 MB.</p>
+                  <p className='fw-semibold mb-1'>Foto de Perfil</p>
+                  <p className='text-p mb-3'>JPG ou PNG. Tamanho máximo de 5 MB.</p>
                   <button className='btn rounded-pill border bg-white px-4 text-muted'>Alterar Foto</button>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        {/* Seção dos Inputs */}
         <div className='row g-4 mt-3'>
-          <div className='col-lg-6'>
+          <div className='col-12 col-md-6'>
             <div className='mb-4'>
               <label htmlFor="nome-perfil">Nome</label>
               <input
@@ -45,7 +54,7 @@ const Perfil = () => {
               />
             </div>
           </div>
-          <div className='col-lg-6'>
+          <div className='col-12 col-md-6'>
             <div className='mb-4'>
               <label htmlFor="sobrenome-perfil">Sobrenome</label>
               <input
@@ -57,8 +66,13 @@ const Perfil = () => {
               />
             </div>
             <div className='mb-4'>
-              <label htmlFor="email-perfil">Tipo de médico</label>
-              <select name="select-medico" id="tipo-medico" className="form-control form-control-custom w-100" style={{backgroundColor: "rgb(250, 247, 242)"}}>
+              <label htmlFor="tipo-medico">Tipo de médico</label>
+              <select 
+                name="select-medico" 
+                id="tipo-medico" 
+                className="form-control form-control-custom w-100" 
+                style={{backgroundColor: "rgb(250, 247, 242)"}}
+              >
                 <option value="1">Psicóloga Clínica</option>
                 <option value="2">Psiquiatra</option>
                 <option value="3">Terapeuta Ocupacional</option>
@@ -67,12 +81,13 @@ const Perfil = () => {
             </div>
           </div>
         </div>
+
+        {/* Seção de Descrição */}
         <div className='row g-4'>
-          <div className='col-lg-12'>
+          <div className='col-12'>
             <div>
               <label htmlFor="descricao-perfil">Descrição</label>
               <textarea
-                type="text"
                 className="form-control form-control-custom w-100"
                 style={{ backgroundColor: '#FAF7F2', minHeight: "150px"}}
                 id="descricao-perfil"
