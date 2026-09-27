@@ -27,8 +27,11 @@ const Configuracoes = () => {
                 <span className='text-p lead'>Personalize suas informações e preferências.</span>
               </div>
 
-              <div className='d-grid d-md-flex align-items-md-end'>
-                <button className='btn btn-success px-4 py-2 py-md-auto fw-semibold'>Salvar Alterações</button>
+              <div className='d-grid d-md-flex justify-content-md-end align-items-md-end'>
+                <button className='btn btn-success px-4 py-2 fw-semibold d-flex align-items-center justify-content-center gap-2'>
+                  <i className="bi bi-plus-lg fs-4"></i>
+                  Salvar Alterações
+                </button>
               </div>
             </div>
           </section>

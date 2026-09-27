@@ -64,29 +64,32 @@ const Sidebar = () => {
                 <hr className="text-secondary opacity-25 mx-2" />
 
                 {/* Navegação */}
-                <ul className='nav nav-pills flex-column mb-auto gap-2 mt-2'>
+                <ul className='nav nav-pills flex-row flex-md-column mb-auto gap-2 mt-2 overflow-x-auto pb-2 pb-md-0'>
                     <li className="nav-item">
-                        <Link to="/" className="nav-link px-3 py-2 link-body-emphasis">
-                            <span className="fw-medium">Agenda</span>
+                        <Link to="/" className="nav-link px-3 py-2 link-body-emphasis d-flex align-items-center gap-2">
+                            <i className="bi bi-calendar-event fs-5"></i>
+                            <span className="fw-medium text-nowrap">Agenda</span>
                         </Link>
                     </li>
-                    <li>
-                        <Link to="/" className="nav-link px-3 py-2 link-body-emphasis">
-                            <span className="fw-medium">Atividades</span>
+                    <li className="nav-item">
+                        <Link to="/" className="nav-link px-3 py-2 link-body-emphasis d-flex align-items-center gap-2">
+                            <i className="bi bi-activity fs-4"></i>
+                            <span className="fw-medium text-nowrap">Atividades</span>
                         </Link>
                     </li>
-                    <li>
-                        <Link to="/" className="nav-link px-3 py-2 link-body-emphasis">
-                            <span className="fw-medium">Tarefas</span>
+                    <li className="nav-item">
+                        <Link to="/" className="nav-link px-3 py-2 link-body-emphasis d-flex align-items-center gap-2">
+                            <i className="bi bi-check-circle fs-5"></i>
+                            <span className="fw-medium text-nowrap">Tarefas</span>
                         </Link>
                     </li>
-                    <li>
-                        <Link to="/" className="nav-link px-3 py-2 link-body-emphasis">
-                            <span className="fw-medium">Blogs / Artigos</span>
+                    <li className="nav-item">
+                        <Link to="/" className="nav-link px-3 py-2 link-body-emphasis d-flex align-items-center gap-2">
+                            <i className="bi bi-journal-bookmark-fill fs-5"></i>
+                            <span className="fw-medium text-nowrap">Blogs / Artigos</span>
                         </Link>
                     </li>
                 </ul>
-
                 <hr className="text-secondary opacity-25 mx-2" />
 
                 {/* Botões de Ação */}
