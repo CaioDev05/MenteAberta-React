@@ -2,6 +2,10 @@ import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Configuracoes from './Configuracoes/Configuracoes';
 import Footer from '../../components/Footer/Footer';
+import Agenda from './Agenda/Agenda';
+import Atividades from './Atividades/Atividades';
+import Tarefas from './Tarefas/Tarefas';
+import Artigos from './Artigos/Artigos';
 
 const PerfilVoluntario = () => {
     const [isOpen, setIsOpen] = useState(false);
@@ -134,6 +138,10 @@ const PerfilVoluntario = () => {
                 </aside>
 
                 <main className='flex-grow-1 w-100'>
+                    {pagina === 1 && (<Agenda />)}
+                    {pagina === 2 && (<Atividades />)}
+                    {pagina === 3 && (<Tarefas />)}
+                    {pagina === 4 && (<Artigos />)}
                     {pagina === 5 && (<Configuracoes />)}
                 </main>
             </div>
