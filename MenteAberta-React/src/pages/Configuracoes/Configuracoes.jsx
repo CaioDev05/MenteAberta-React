@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-import Sidebar from '../../components/Header/Sidebar'
-import Footer from '../../components/Footer/Footer'
 import Conta from './Conta';
 import Perfil from './Perfil';
 import Especializacao from './Especializacao';
@@ -13,11 +11,8 @@ const Configuracoes = () => {
 
   return (
     <>
-      <div className='d-flex flex-column flex-lg-row'>
-        <Sidebar />
-
-        <main className='vw-100 overflow-hidden'>
-          <section className='hero-section container mt-4 mt-md-0'>
+        <div className='container'>
+          <section className='hero-section container mt-md-0'>
             <div className='d-flex flex-column flex-md-row justify-content-between gap-3'>
               <div>
                 <div className="d-inline-flex align-items-center mb-3 card-lt-hero">
@@ -84,9 +79,7 @@ const Configuracoes = () => {
               <button className='btn rounded-pill border bg-white px-4 text-muted' onClick={() => setPagina(pagina < 4 ? pagina + 1 : pagina)}>Próxima</button>
             </div>
           </section>
-        </main>
-      </div>
-      <Footer />
+        </div>
     </>
   )
 }

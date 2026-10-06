@@ -7,6 +7,7 @@ import Agendamento from "./pages/Agendamento/Agendamento"
 import Blog from "./pages/Blog/Blog"
 import Voluntario from "./pages/Voluntarios/Voluntario"
 import Configuracoes from "./pages/Configuracoes/Configuracoes"
+import PerfilVoluntario from "./pages/PerfilVoluntario/PerfilVoluntario"
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
       <Route path="/agendamento" element={<Agendamento/>}></Route>
       <Route path="/voluntario" element={<Voluntario/>}></Route>
       <Route path="/configuracoes" element={<Configuracoes/>}></Route>
+      <Route path="/perfilvoluntario" element={<PerfilVoluntario/>}></Route>
     </Routes>
   )
 }
