@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom';
-import Configuracoes from '../Configuracoes/Configuracoes';
+import Configuracoes from './Configuracoes/Configuracoes';
 import Footer from '../../components/Footer/Footer';
 
 const PerfilVoluntario = () => {
