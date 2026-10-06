@@ -5,13 +5,12 @@ import Footer from '../../components/Footer/Footer';
 
 const PerfilVoluntario = () => {
     const [isOpen, setIsOpen] = useState(false);
-
     const [pagina, setPagina] = useState(5); // 1 - Agenda / 2 - Atividade / 3 - Tarefas / 4 - Blog / 5 - Configurações
 
     return (
         <>
-            <div className='d-flex'>
-                <aside className='vh-100 shadow-sm' style={{ backgroundColor: "#F3F0EA", borderRight: "1px solid #DDE5E1" }}>
+            <div className='d-flex min-vh-100'>
+                <aside className='shadow-sm' style={{ backgroundColor: "#F3F0EA", borderRight: "1px solid #DDE5E1" }}>
                     {/* Botão Hambúrguer (Mobile) - Fica fixo no topo esquerdo */}
                     <button
                         className="btn btn-success d-md-none position-fixed m-3 z-3 shadow-sm"
@@ -30,7 +29,7 @@ const PerfilVoluntario = () => {
 
                     <div
                         className={`offcanvas-md offcanvas-start d-flex flex-column flex-shrink-0 p-3 ${isOpen ? 'show' : ''}`}
-                        style={{ width: "280px", zIndex: 1045 }}
+                        style={{ width: "280px", zIndex: 1045, backgroundColor: "#F3F0EA", borderRight: "1px solid #DDE5E1" }}
                         tabIndex="-1"
                     >
                         {/* Botão de Fechar interno nativo (Aparece apenas no mobile) */}
@@ -70,52 +69,71 @@ const PerfilVoluntario = () => {
                         <hr className="text-secondary opacity-25 mx-2" />
 
                         {/* Navegação */}
-                        <ul className='nav nav-pills flex-row flex-md-column mb-auto gap-4 mt-2 overflow-x-auto pb-2 pb-md-0'>
-                            <li className="nav-item">
-                                <button className={pagina === 1 ? "btn btn-success d-flex align-items-center justify-content-center gap-2 py-2 fw-semibold" : "nav-link px-3 py-2 link-body-emphasis d-flex align-items-center gap-2"} onClick={() => setPagina(1)}>
+                        <ul className='nav nav-pills flex-column mb-auto gap-2 mt-2 w-100'>
+                            <li className="nav-item w-100">
+                                <button
+                                    className={pagina === 1 ? "btn btn-success w-100 text-start d-flex align-items-center justify-content-start gap-2 px-3 py-2 fw-semibold" : "nav-link w-100 text-start px-3 py-2 link-body-emphasis d-flex align-items-center justify-content-start gap-2"}
+                                    onClick={() => setPagina(1)}
+                                >
                                     <i className="bi bi-calendar-event fs-5"></i>
                                     <span className="fw-medium text-nowrap">Agenda</span>
                                 </button>
                             </li>
-                            <li className="nav-item">
-                                <button className={pagina === 2 ? "btn btn-success d-flex align-items-center justify-content-center gap-2 py-2 fw-semibold" : "nav-link px-3 py-2 link-body-emphasis d-flex align-items-center gap-2"} onClick={() => setPagina(2)}>
-                                    <i className="bi bi-activity fs-4"></i>
+                            <li className="nav-item w-100">
+                                <button
+                                    className={pagina === 2 ? "btn btn-success w-100 text-start d-flex align-items-center justify-content-start gap-2 px-3 py-2 fw-semibold" : "nav-link w-100 text-start px-3 py-2 link-body-emphasis d-flex align-items-center justify-content-start gap-2"}
+                                    onClick={() => setPagina(2)}
+                                >
+                                    <i className="bi bi-activity fs-5"></i>
                                     <span className="fw-medium text-nowrap">Atividades</span>
                                 </button>
                             </li>
-                            <li className="nav-item">
-                                <button className={pagina === 3 ? "btn btn-success d-flex align-items-center justify-content-center gap-2 py-2 fw-semibold" : "nav-link px-3 py-2 link-body-emphasis d-flex align-items-center gap-2"} onClick={() => setPagina(3)}>
+                            <li className="nav-item w-100">
+                                <button
+                                    className={pagina === 3 ? "btn btn-success w-100 text-start d-flex align-items-center justify-content-start gap-2 px-3 py-2 fw-semibold" : "nav-link w-100 text-start px-3 py-2 link-body-emphasis d-flex align-items-center justify-content-start gap-2"}
+                                    onClick={() => setPagina(3)}
+                                >
                                     <i className="bi bi-check-circle fs-5"></i>
                                     <span className="fw-medium text-nowrap">Tarefas</span>
                                 </button>
                             </li>
-                            <li className="nav-item">
-                                <button className={pagina === 4 ? "btn btn-success d-flex align-items-center justify-content-center gap-2 py-2 fw-semibold" : "nav-link px-3 py-2 link-body-emphasis d-flex align-items-center gap-2"} onClick={() => setPagina(4)}>
+                            <li className="nav-item w-100">
+                                <button
+                                    className={pagina === 4 ? "btn btn-success w-100 text-start d-flex align-items-center justify-content-start gap-2 px-3 py-2 fw-semibold" : "nav-link w-100 text-start px-3 py-2 link-body-emphasis d-flex align-items-center justify-content-start gap-2"}
+                                    onClick={() => setPagina(4)}
+                                >
                                     <i className="bi bi-journal-bookmark-fill fs-5"></i>
                                     <span className="fw-medium text-nowrap">Blogs / Artigos</span>
                                 </button>
                             </li>
-                            <li className="nav-item">
-                                <button className={pagina === 5 ? "btn btn-success d-flex align-items-center justify-content-center gap-2 py-2 fw-semibold" : "nav-link px-3 py-2 link-body-emphasis d-flex align-items-center gap-2"} onClick={() => setPagina(5)}>
+                            <li className="nav-item w-100">
+                                <button
+                                    className={pagina === 5 ? "btn btn-success w-100 text-start d-flex align-items-center justify-content-start gap-2 px-3 py-2 fw-semibold" : "nav-link w-100 text-start px-3 py-2 link-body-emphasis d-flex align-items-center justify-content-start gap-2"}
+                                    onClick={() => setPagina(5)}
+                                >
                                     <i className="bi bi-gear-fill fs-5"></i>
                                     <span className="fw-medium text-nowrap">Configurações</span>
                                 </button>
                             </li>
                         </ul>
-                        <div className='content-box px-3 py-3 my-3' style={{ background: "#E6EFEA" }}>
-                            <div className='d-flex gap-3 align-items-center mb-2'>
-                                <i className="bi bi-chat-heart fs-5"></i>
+
+                        {/* Box de Apoio */}
+                        <div className='content-box px-3 py-3 my-3 rounded-sm' style={{ background: "#E6EFEA" }}>
+                            <div className='d-flex gap-2 align-items-center mb-1'>
+                                <i className="bi bi-chat-heart fs-5" style={{ color: "#527466" }}></i>
                                 <span className="fw-semibold" style={{ color: "#527466" }}>Precisa de apoio?</span>
                             </div>
                             <span style={{ color: "#6F7A75", fontSize: "0.9em" }}>A coordenação está disponível para orientar você.</span>
                         </div>
-                        <Link to="/" className="btn rounded-pill border bg-white px-4 py-3 fw-semibold d-flex justify-content-start align-items-center gap-2">
+
+                        {/* Botão Sair */}
+                        <Link to="/" className="btn rounded-pill border bg-white px-4 py-2 mt-auto fw-semibold d-flex justify-content-start align-items-center gap-2 w-100 text-start">
                             <i className="bi bi-box-arrow-right fs-5"></i> Sair
                         </Link>
-
                     </div>
                 </aside>
-                <main className='vw-100'>
+
+                <main className='flex-grow-1 w-100'>
                     {pagina === 5 && (<Configuracoes />)}
                 </main>
             </div>
