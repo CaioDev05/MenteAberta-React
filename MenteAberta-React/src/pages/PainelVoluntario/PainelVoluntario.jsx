@@ -7,7 +7,7 @@ import Atividades from './Atividades/Atividades';
 import Tarefas from './Tarefas/Tarefas';
 import Artigos from './Artigos/Artigos';
 
-const PerfilVoluntario = () => {
+const PainelVoluntario = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [pagina, setPagina] = useState(5); // 1 - Agenda / 2 - Atividade / 3 - Tarefas / 4 - Blog / 5 - Configurações
 
@@ -150,4 +150,4 @@ const PerfilVoluntario = () => {
     )
 }
 
-export default PerfilVoluntario
+export default PainelVoluntario
