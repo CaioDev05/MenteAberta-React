@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../../components/Header/Header'
 import Footer from '../../components/Footer/Footer'
 import './Contato.css'
 
 const Contato = () => {
+
+    const [dropdownAberto, setDropdownAberto] = useState(false);
+    const [opcaoSelecionada, setOpcaoSelecionada] = useState("Selecione uma opção");
+
+    const handleSelecionar = (opcao) => {
+        setDropdownAberto(false);
+        setOpcaoSelecionada(opcao);
+    }
+
     return (
         <>
             <Header />
@@ -83,28 +92,37 @@ const Contato = () => {
                                             Qual o Assunto principal?
                                         </label>
 
-                                        <select
-                                            className="form-select form-control-custom"
-                                            id="subject"
-                                            defaultValue=""
-                                            required
-                                        >
-                                            <option value="" disabled>
-                                                Selecione uma opção
-                                            </option>
+                                        <div className="col-12 col-md-auto position-relative">
+                                            <button
+                                                className="btn form-control-custom w-100 d-flex justify-content-between"
+                                                type="button"
+                                                onClick={() => setDropdownAberto(!dropdownAberto)}
+                                                style={{ minWidth: "180px", height: "46px" }}
+                                            >
+                                                {opcaoSelecionada}
+                                                <i className="bi bi-chevron-down ms-2 fs-6"></i>
+                                            </button>
 
-                                            <option value="dúvida">
-                                                Dúvida sobre agendamento
-                                            </option>
+                                            <ul
+                                                className={`dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 ${dropdownAberto ? 'show d-block' : ''}`}
+                                                style={{ position: 'absolute', top: '100%', left: 0, zIndex: 1050, '--bs-dropdown-link-active-bg': '#3d5a4f' }}
+                                                id="subject"
+                                            >
+                                                {["Selecione uma opção", "Dúvida sobre agendamento", "Elogio", "Reclamação"].map((opcao) => (
+                                                    <li key={opcao}>
+                                                        <button
+                                                            className={`dropdown-item py-2 rounded-3 mb-1 ${opcaoSelecionada === opcao ? "active fw-medium" : ""}`}
+                                                            onClick={() => handleSelecionar(opcao)}>
+                                                            {opcao}
+                                                        </button>
+                                                    </li>
+                                                )
+                                                )
+                                                }
 
-                                            <option value="elogio">
-                                                Elogio
-                                            </option>
+                                            </ul>
+                                        </div>
 
-                                            <option value="reclamação">
-                                                Reclamação
-                                            </option>
-                                        </select>
                                     </div>
 
                                     <div className="mb-4">
