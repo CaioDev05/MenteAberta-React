@@ -71,8 +71,7 @@ const Atividades = () => {
             </button>
 
             <ul
-              className={`dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 ${dropdownAberto1 ? 'show d-block' : ''}`}
-              style={{ position: 'absolute', top: '100%', left: 0, zIndex: 1050, '--bs-dropdown-link-active-bg': '#3d5a4f' }}
+              className={`dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 ${dropdownAberto1 ? 'show d-block' : ''} dropdown-menu-style`}
             >
               {["Todos", "Roda de Conversa", "Encontro de Equipe", "Workshop Online", "Integração", "Capacitação"].map((opcao) => (
                 <li key={opcao}>
@@ -98,8 +97,7 @@ const Atividades = () => {
             </button>
 
             <ul
-              className={`dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 ${dropdownAberto2 ? 'show d-block' : ''}`}
-              style={{ position: 'absolute', top: '100%', left: 0, zIndex: 1050, '--bs-dropdown-link-active-bg': '#3d5a4f' }}
+              className={`dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 ${dropdownAberto2 ? 'show d-block' : ''} dropdown-menu-style`}
             >
               {["Todos", "Confirmadas", "Incrições Abertas", "Rascunho", "Canceladas"].map((opcao) => (
                 <li key={opcao}>

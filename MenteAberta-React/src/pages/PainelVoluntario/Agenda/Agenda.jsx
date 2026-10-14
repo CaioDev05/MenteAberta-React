@@ -308,8 +308,7 @@ const Agenda = () => {
             </button>
 
             <ul
-              className={`dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 ${dropdownAberto ? 'show d-block' : ''}`}
-              style={{ position: 'absolute', top: '100%', left: 0, zIndex: 1050, '--bs-dropdown-link-active-bg': '#3d5a4f' }}
+              className={`dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 ${dropdownAberto ? 'show d-block' : ''} dropdown-menu-style`}
             >
               {["Todos", "Atendimento", "Disponibilidade", "Supervisão", "Retorno"].map((opcao) => (
                 <li key={opcao}>

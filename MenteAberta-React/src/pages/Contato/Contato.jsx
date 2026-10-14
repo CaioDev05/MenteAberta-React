@@ -94,7 +94,7 @@ const Contato = () => {
 
                                         <div className="col-12 col-md-auto position-relative">
                                             <button
-                                                className="btn form-control-custom w-100 d-flex justify-content-between"
+                                                className="btn form-control-custom w-100 d-flex justify-content-between align-items-center"
                                                 type="button"
                                                 onClick={() => setDropdownAberto(!dropdownAberto)}
                                                 style={{ minWidth: "180px", height: "46px" }}
@@ -104,8 +104,7 @@ const Contato = () => {
                                             </button>
 
                                             <ul
-                                                className={`dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 ${dropdownAberto ? 'show d-block' : ''}`}
-                                                style={{ position: 'absolute', top: '100%', left: 0, zIndex: 1050, '--bs-dropdown-link-active-bg': '#3d5a4f' }}
+                                                className={`dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 ${dropdownAberto ? 'show d-block' : ''} dropdown-menu-style`}
                                                 id="subject"
                                             >
                                                 {["Selecione uma opção", "Dúvida sobre agendamento", "Elogio", "Reclamação"].map((opcao) => (

@@ -444,6 +444,14 @@ body {
     color: #A0AAB2;
 }
 
+.dropdown-menu-style {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1050;
+    --bs-dropdown-link-active-bg: #3d5a4f;
+}
+
 @media (max-width: 767.98px) {
     .bg-atende-voluntario .container {
         padding-left: 1rem !important;
