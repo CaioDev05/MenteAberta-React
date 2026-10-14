@@ -31,7 +31,7 @@ const Atividades = () => {
             <h1 className='display-5 fw-bold text-body-emphasis lh-1 mb-3 mb-md-4'>
               Atividades
             </h1>
-            <span className='text-p lead'>
+            <span className='text-secondary mb-0'>
               Gerencie encontros, grupos e capacitações da sua jornada voluntária.
             </span>
           </div>
