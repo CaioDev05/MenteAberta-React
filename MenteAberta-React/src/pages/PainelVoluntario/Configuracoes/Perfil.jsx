@@ -90,7 +90,6 @@ const Perfil = () => {
 
                 <ul
                   className={`dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 ${dropdownAberto ? 'show d-block' : ''} dropdown-menu-style`}
-                  style={{ backgroundColor: '#FAF7F2' }}
                   id="subject"
                 >
                   {["Psicóloga Clínica", "Psiquiatra", "Terapeuta Ocupacional", "Prefiro não Informar"].map((opcao) => (

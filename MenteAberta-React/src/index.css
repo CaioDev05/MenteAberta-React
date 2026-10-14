@@ -425,6 +425,7 @@ body {
 
 .form-control-custom:focus {
     border-color: #6B8E7D;
+    transition: box-shadow 0.2s ease-in-out;
     box-shadow: 0 0 0 0.2rem rgba(107, 142, 125, 0.25);
 }
 
