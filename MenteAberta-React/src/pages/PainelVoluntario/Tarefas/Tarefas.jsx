@@ -9,6 +9,9 @@ const Tarefas = () => {
 
   // Modal para criar nova tarefa
   const [modalNovaTarefa, setModalNovaTarefa] = useState(false);
+  const [dropdownCategoria, setDropdownCategoria] = useState(false);
+  const [dropdownColuna, setDropdownColuna] = useState(false);
+  const [dropdownPrioridadeModal, setDropdownPrioridadeModal] = useState(false);
   const [colunaDestino, setColunaDestino] = useState('a_fazer');
   const [novaTarefaForm, setNovaTarefaForm] = useState({
     titulo: '',
@@ -189,6 +192,9 @@ const Tarefas = () => {
       prioridade: 'Alta',
       coluna
     });
+    setDropdownCategoria(false);
+    setDropdownColuna(false);
+    setDropdownPrioridadeModal(false);
     setModalNovaTarefa(true);
   };
 
@@ -303,27 +309,29 @@ const Tarefas = () => {
           </div>
 
           {/* Filtro Dropdown: Prioridades */}
-          <div className="col-12 col-md-auto position-relative">
+          <div className="col-12 col-md-auto position-relative" >
             <button
-              className="btn bg-white border rounded-pill px-4 py-2 fw-semibold shadow-sm d-flex justify-content-between align-items-center w-100 text-dark gap-2"
+              className="btn bg-white border rounded-pill px-4 py-2 fw-semibold shadow-sm d-flex justify-content-start align-items-center w-100 text-dark gap-2"
               type="button"
               onClick={() => {
                 setDropdownPrioridade(!dropdownPrioridade);
                 setDropdownResponsavel(false);
               }}
+              
             >
               <i className="bi bi-chevron-down fs-6 text-dark"></i>
               <span>{filtroPrioridade}</span>
             </button>
 
             {dropdownPrioridade && (
-              <ul className="dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 show d-block position-absolute end-0 z-3">
+              <ul className="dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 show d-block position-absolute end-0 z-3 dropdown-menu-style"
+              style={{minWidth: '220px'}}>
                 {['Todas as prioridades', 'Alta', 'Média', 'Baixa'].map((prioridade) => (
                   <li key={prioridade}>
                     <button
                       className={`dropdown-item py-2 rounded-3 mb-1 ${
                         filtroPrioridade === prioridade ? 'active fw-medium' : ''
-                      }`}
+                      } `}
                       onClick={() => {
                         setFiltroPrioridade(prioridade);
                         setDropdownPrioridade(false);
@@ -338,7 +346,7 @@ const Tarefas = () => {
           </div>
 
           {/* Filtro Dropdown: Responsável */}
-          <div className="col-12 col-md-auto position-relative">
+          <div className="col-12 col-md-auto position-relative" >
             <button
               className="btn bg-white border rounded-pill px-4 py-2 fw-semibold shadow-sm d-flex justify-content-between align-items-center w-100 text-dark gap-2"
               type="button"
@@ -346,13 +354,14 @@ const Tarefas = () => {
                 setDropdownResponsavel(!dropdownResponsavel);
                 setDropdownPrioridade(false);
               }}
+              
             >
               <i className="bi bi-chevron-down fs-6 text-dark"></i>
               <span>{filtroResponsavel}</span>
             </button>
 
             {dropdownResponsavel && (
-              <ul className="dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 show d-block position-absolute end-0 z-3">
+              <ul className="dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 show d-block position-absolute end-0 z-3 dropdown-menu-style">
                 {['Minhas tarefas', 'Todas as tarefas', 'Atribuídas à equipe'].map((opcao) => (
                   <li key={opcao}>
                     <button
@@ -500,7 +509,7 @@ const Tarefas = () => {
                       </label>
                       <input
                         type="text"
-                        className="form-control rounded-3 shadow-none"
+                        className="form-control form-control-custom"
                         placeholder="Ex: Revisar plano de acolhimento"
                         value={novaTarefaForm.titulo}
                         onChange={(e) =>
@@ -515,7 +524,7 @@ const Tarefas = () => {
                         Descrição (opcional)
                       </label>
                       <textarea
-                        className="form-control rounded-3 shadow-none"
+                        className="form-control form-control-custom"
                         rows="2"
                         placeholder="Ex: Anexar observações da última sessão."
                         value={novaTarefaForm.descricao}
@@ -526,61 +535,125 @@ const Tarefas = () => {
                     </div>
 
                     <div className="row g-2 mb-3">
-                      <div className="col-6">
+                      <div className="col-6 position-relative">
                         <label className="form-label small fw-semibold text-secondary">
                           Categoria
                         </label>
-                        <select
-                          className="form-select rounded-3 shadow-none"
-                          value={novaTarefaForm.categoria}
-                          onChange={(e) =>
-                            setNovaTarefaForm({ ...novaTarefaForm, categoria: e.target.value })
-                          }
+                        <button
+                          className="form-control form-control-custom d-flex justify-content-start gap-1 fw-semibold"
+                          type="button"
+                          onClick={() => {
+                            setDropdownCategoria(!dropdownCategoria);
+                            setDropdownColuna(false);
+                            setDropdownPrioridadeModal(false);
+                          }}
                         >
-                          <option value="Atendimento">Atendimento</option>
-                          <option value="Equipe">Equipe</option>
-                          <option value="Atividade">Atividade</option>
-                          <option value="Agenda">Agenda</option>
-                          <option value="Coordenação">Coordenação</option>
-                          <option value="Capacitação">Capacitação</option>
-                          <option value="Conta">Conta</option>
-                        </select>
+                          <i className="bi bi-chevron-down fs-6 text-dark"></i>
+                          <span>{novaTarefaForm.categoria}</span>
+                        </button>
+
+                        {dropdownCategoria && (
+                          <ul className="dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 show d-block position-absolute start-0 z-3 dropdown-menu-style">
+                            {['Atendimento', 'Equipe', 'Atividade', 'Agenda', 'Coordenação', 'Capacitação', 'Conta'].map((categoria) => (
+                              <li key={categoria}>
+                                <button
+                                  type="button"
+                                  className={`dropdown-item py-2 rounded-3 mb-1 ${
+                                    novaTarefaForm.categoria === categoria ? 'active fw-medium' : ''
+                                  }`}
+                                  onClick={() => {
+                                    setNovaTarefaForm({ ...novaTarefaForm, categoria });
+                                    setDropdownCategoria(false);
+                                  }}
+                                >
+                                  {categoria}
+                                </button>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
 
-                      <div className="col-6">
+                      <div className="col-6 position-relative">
                         <label className="form-label small fw-semibold text-secondary">
                           Coluna
                         </label>
-                        <select
-                          className="form-select rounded-3 shadow-none"
-                          value={novaTarefaForm.coluna}
-                          onChange={(e) =>
-                            setNovaTarefaForm({ ...novaTarefaForm, coluna: e.target.value })
-                          }
+                        <button
+                          className="form-control form-control-custom d-flex justify-content-start gap-1 fw-semibold"
+                          type="button"
+                          onClick={() => {
+                            setDropdownColuna(!dropdownColuna);
+                            setDropdownCategoria(false);
+                            setDropdownPrioridadeModal(false);
+                          }}
                         >
-                          <option value="a_fazer">A fazer</option>
-                          <option value="em_andamento">Em andamento</option>
-                          <option value="concluidas">Concluídas</option>
-                        </select>
+                          <i className="bi bi-chevron-down fs-6 text-dark"></i>
+                          <span>
+                            {colunasConfig.find((c) => c.id === novaTarefaForm.coluna)?.nome || 'A fazer'}
+                          </span>
+                        </button>
+
+                        {dropdownColuna && (
+                          <ul className="dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 show d-block position-absolute start-0 z-3 dropdown-menu-style">
+                            {colunasConfig.map((col) => (
+                              <li key={col.id}>
+                                <button
+                                  type="button"
+                                  className={`dropdown-item py-2 rounded-3 mb-1 ${
+                                    novaTarefaForm.coluna === col.id ? 'active fw-medium' : ''
+                                  }`}
+                                  onClick={() => {
+                                    setNovaTarefaForm({ ...novaTarefaForm, coluna: col.id });
+                                    setDropdownColuna(false);
+                                  }}
+                                >
+                                  {col.nome}
+                                </button>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
                     </div>
 
                     <div className="row g-2 mb-3">
-                      <div className="col-6">
+                      <div className="col-6 position-relative">
                         <label className="form-label small fw-semibold text-secondary">
                           Prioridade
                         </label>
-                        <select
-                          className="form-select rounded-3 shadow-none"
-                          value={novaTarefaForm.prioridade}
-                          onChange={(e) =>
-                            setNovaTarefaForm({ ...novaTarefaForm, prioridade: e.target.value })
-                          }
+                        <button
+                          className="form-control form-control-custom d-flex justify-content-start gap-1 fw-semibold"
+                          type="button"
+                          onClick={() => {
+                            setDropdownPrioridadeModal(!dropdownPrioridadeModal);
+                            setDropdownCategoria(false);
+                            setDropdownColuna(false);
+                          }}
                         >
-                          <option value="Alta">Alta</option>
-                          <option value="Média">Média</option>
-                          <option value="Baixa">Baixa</option>
-                        </select>
+                          <i className="bi bi-chevron-down fs-6 text-dark"></i>
+                          <span>{novaTarefaForm.prioridade}</span>
+                        </button>
+
+                        {dropdownPrioridadeModal && (
+                          <ul className="dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 show d-block position-absolute start-0 z-3 dropdown-menu-style">
+                            {['Alta', 'Média', 'Baixa'].map((prioridade) => (
+                              <li key={prioridade}>
+                                <button
+                                  type="button"
+                                  className={`dropdown-item py-2 rounded-3 mb-1 ${
+                                    novaTarefaForm.prioridade === prioridade ? 'active fw-medium' : ''
+                                  }`}
+                                  onClick={() => {
+                                    setNovaTarefaForm({ ...novaTarefaForm, prioridade });
+                                    setDropdownPrioridadeModal(false);
+                                  }}
+                                >
+                                  {prioridade}
+                                </button>
+                              </li>
+                            ))}
+                          </ul>
+                        )}
                       </div>
 
                       <div className="col-6">
@@ -589,7 +662,7 @@ const Tarefas = () => {
                         </label>
                         <input
                           type="text"
-                          className="form-control rounded-3 shadow-none"
+                          className="form-control form-control-custom"
                           placeholder="Ex: Hoje, 17:00 ou 28 out"
                           value={novaTarefaForm.dataInfo}
                           onChange={(e) =>
