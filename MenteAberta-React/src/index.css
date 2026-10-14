@@ -333,7 +333,7 @@ body {
     transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
 }
 
-.form-control:focus {
+.input-group:not(.input-group-password) .form-control:focus {
     box-shadow: none !important;
     border-color: transparent !important;
     outline: none;
@@ -428,10 +428,30 @@ body {
     box-shadow: 0 0 0 0.2rem rgba(107, 142, 125, 0.25);
 }
 
+.input-group-password {
+    border-radius: 12px;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.input-group-password:focus-within {
+    border-color: transparent !important;
+    box-shadow: 0 0 0 0.2rem rgba(107, 142, 125, 0.25) !important;
+}
+
 .input-group-password .form-control-custom {
     border-right: none;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.input-group-password .form-control-custom:focus {
+    border-color: #6B8E7D;
+    box-shadow: none !important;
+}
+
+.input-group-password:focus-within .form-control-custom {
+    border-color: #6B8E7D;
 }
 
 .input-group-password .input-group-text {
@@ -442,6 +462,11 @@ body {
     border-bottom-right-radius: 12px;
     cursor: pointer;
     color: #A0AAB2;
+    transition: border-color 0.2s ease-in-out;
+}
+
+.input-group-password:focus-within .input-group-text {
+    border-color: #6B8E7D;
 }
 
 .dropdown-menu-style {
