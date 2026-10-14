@@ -1,22 +1,32 @@
 import React from 'react'
+import { useState } from 'react'
 
 const Perfil = () => {
+
+  const [dropdownAberto, setDropDownAberto] = useState(false);
+  const [opcaoSelecionada, setOpcaoSelecionada] = useState("");
+
+  const handleSelecionar = (opcao) => {
+    setDropDownAberto(false);
+    setOpcaoSelecionada(opcao);
+  }
+
   return (
     <>
       <div className='content-box shadow-sm mb-4'>
         <h3>Perfil Profissional</h3>
         <p className='text-p fs-5'>Mantenha seus dados públicos atualizados.</p>
-        
+
         {/* Seção da Foto de Perfil */}
         <div className='row g-4 mt-3'>
           <div className='col-12 col-lg-8'>
             <div className='row text-center text-md-start'>
               <div className='col-12 col-md-4 col-lg-3 mb-3 mb-md-0'>
-                <img 
-                  src="Voluntario/pro-photo.png" 
-                  alt="" 
-                  className="rounded-circle shadow-sm img-fluid" 
-                  width="140" 
+                <img
+                  src="Voluntario/pro-photo.png"
+                  alt=""
+                  className="rounded-circle shadow-sm img-fluid"
+                  width="140"
                 />
               </div>
               <div className='col-12 col-md-8 col-lg-9 d-flex align-items-center justify-content-center justify-content-md-start p-0'>
@@ -67,17 +77,36 @@ const Perfil = () => {
             </div>
             <div className='mb-4'>
               <label htmlFor="tipo-medico">Tipo de médico</label>
-              <select 
-                name="select-medico" 
-                id="tipo-medico" 
-                className="form-control form-control-custom w-100" 
-                style={{backgroundColor: "rgb(250, 247, 242)"}}
-              >
-                <option value="1">Psicóloga Clínica</option>
-                <option value="2">Psiquiatra</option>
-                <option value="3">Terapeuta Ocupacional</option>
-                <option value="4">Outra Opção</option>
-              </select>
+              <div className="col-12 col-md-auto position-relative">
+                <button
+                  className="btn form-control form-control-custom w-100 d-flex justify-content-between align-items-center"
+                  style={{ backgroundColor: '#FAF7F2', minWidth: "180px" }}
+                  type="button"
+                  onClick={() => setDropDownAberto(!dropdownAberto)}
+                >
+                  {opcaoSelecionada}
+                  <i className="bi bi-chevron-down ms-2 fs-6"></i>
+                </button>
+
+                <ul
+                  className={`dropdown-menu w-100 shadow border-0 mt-2 p-2 rounded-4 ${dropdownAberto ? 'show d-block' : ''} dropdown-menu-style`}
+                  style={{ backgroundColor: '#FAF7F2' }}
+                  id="subject"
+                >
+                  {["Psicóloga Clínica", "Psiquiatra", "Terapeuta Ocupacional", "Prefiro não Informar"].map((opcao) => (
+                    <li key={opcao}>
+                      <button
+                        className={`dropdown-item py-2 rounded-3 mb-1 ${opcaoSelecionada === opcao ? "active fw-medium" : ""}`}
+                        onClick={() => handleSelecionar(opcao)}>
+                        {opcao}
+                      </button>
+                    </li>
+                  )
+                  )
+                  }
+
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -89,7 +118,7 @@ const Perfil = () => {
               <label htmlFor="descricao-perfil">Descrição</label>
               <textarea
                 className="form-control form-control-custom w-100"
-                style={{ backgroundColor: '#FAF7F2', minHeight: "150px"}}
+                style={{ backgroundColor: '#FAF7F2', minHeight: "150px" }}
                 id="descricao-perfil"
                 maxLength={500}
                 placeholder='Atendimento acolhedor com foco em ansiedade, autocuidado e relações saudáveis.'
